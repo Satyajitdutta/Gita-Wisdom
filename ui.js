@@ -1,3 +1,11 @@
+let _current = null;
+
+function currentUser() {
+  return _current;
+}
+
+export { currentUser };
+
 export function showLoader(){document.getElementById('loader').classList.remove('hidden');}
 export function hideLoader(){document.getElementById('loader').classList.add('hidden');}
 export function openModal(el){el.classList.remove('hidden');}
