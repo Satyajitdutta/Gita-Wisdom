@@ -81,3 +81,4 @@ passwordInput.setAttribute('autocomplete', 'current-password');
 passwordInput.placeholder = 'Password';
 passwordInput.required = true;
 // Append the input to the form or wherever it needs to go
+document.getElementById('tab-upgrade').onclick = () => showTab('upgrade');
