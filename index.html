@@ -30,8 +30,8 @@
     <div class="glass card">
       <h2 id="authTitle">Login</h2>
       <form id="authForm">
-        <input id="email2"    type="email"    placeholder="Email" required/>
-        <input id="password" type="password" placeholder="Password" required/>
+        <input id="email" type="email" name="email" autocomplete="email" placeholder="Email" required>
+<input id="password" type="password" name="password" autocomplete="current-password" placeholder="Password" required>
         <div id="signupFields" class="hidden">
           <input id="fullName" type="text"   placeholder="Full Name" required/>
           <select id="ageGroup" required>
@@ -150,5 +150,3 @@
   <script src="app.js" type="module"></script>
 </body>
 </html>
-<input type="email" id="email" name="email" autocomplete="email" placeholder="Email" required>
-<input type="password" id="password" name="password" autocomplete="current-password" placeholder="Password" required>
