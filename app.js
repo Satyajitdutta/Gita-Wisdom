@@ -64,5 +64,20 @@ function startGuide(){
   };
   render();
 }
-
+//Add autocomplete attributes to dynamic inputs
 initApp();
+const emailInput = document.createElement('input');
+emailInput.type = 'email';
+emailInput.id = 'email';
+emailInput.setAttribute('autocomplete', 'email');
+emailInput.placeholder = 'Email';
+emailInput.required = true;
+// Append the input to the form or wherever it needs to go
+
+const passwordInput = document.createElement('input');
+passwordInput.type = 'password';
+passwordInput.id = 'password';
+passwordInput.setAttribute('autocomplete', 'current-password');
+passwordInput.placeholder = 'Password';
+passwordInput.required = true;
+// Append the input to the form or wherever it needs to go
