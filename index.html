@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Gita Wisdom</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="manifest" href="manifest.json"/>
+</head>
+<body>
+  <!-- COSMIC BACKGROUND -->
+  <div id="bg"></div>
+
+  <!-- HEADER -->
+  <header class="glass">
+    <h1>Gita <span class="accent">Wisdom</span></h1>
+    <nav>
+      <button id="tab-explore" class="tab-btn active">Explore Gita Shloka</button>
+      <button id="tab-speak"   class="tab-btn">Speak Your Mind</button>
+      <button id="tab-remind"  class="tab-btn">Daily Reminders</button>
+      <button id="upgradeBtn"  class="upgrade-btn hidden">Upgrade</button>
+    </nav>
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </header>
+
+  <!-- LOGIN / SIGNUP PAGE -->
+  <section id="authPage" class="page center">
+    <div class="glass card">
+      <h2 id="authTitle">Login</h2>
+      <form id="authForm">
+        <input id="email"    type="email"    placeholder="Email" required/>
+        <input id="password" type="password" placeholder="Password" required/>
+        <div id="signupFields" class="hidden">
+          <input id="fullName" type="text"   placeholder="Full Name" required/>
+          <select id="ageGroup" required>
+            <option value="">Age Group</option>
+            <option>child</option>
+            <option>teenager</option>
+            <option>adult</option>
+          </select>
+        </div>
+        <button type="submit" id="authSubmit">Login</button>
+      </form>
+      <p id="toggleAuth">Don't have an account? <span class="link">Sign up</span></p>
+    </div>
+  </section>
+
+  <!-- MAIN APP -->
+  <main id="mainApp" class="page hidden">
+    <!-- TAB 1 – EXPLORE -->
+    <section id="exploreTab" class="tab">
+      <div class="glass card">
+        <label>Chapter:
+          <select id="chapterSelect"></select>
+        </label>
+        <label>Verse:
+          <select id="verseSelect"></select>
+        </label>
+        <label>Language:
+          <select id="langSelect">
+            <option>English</option><option>Hindi</option><option>Bengali</option>
+          </select>
+        </label>
+        <button id="randomBtn">Random Verse</button>
+      </div>
+
+      <div class="glass card verse-card">
+        <p id="sanskritVerse" class="sanskrit"></p>
+        <button class="audio-btn" title="Play Sanskrit" data-target="sanskritVerse">🔊</button>
+        <p id="transliteration"></p>
+        <p id="translation"></p>
+        <div id="explanation"></div>
+      </div>
+    </section>
+
+    <!-- TAB 2 – SPEAK -->
+    <section id="speakTab" class="tab hidden">
+      <div class="glass card">
+        <h2>Ask your question</h2>
+        <textarea id="questionInput" placeholder="Type or speak your question..."></textarea>
+        <button id="micBtn" title="Voice input">🎤</button>
+        <button id="askBtn">Get Guidance</button>
+        <p id="questionsLeft"></p>
+      </div>
+      <div id="aiResponse" class="glass card hidden">
+        <h3>Relevant Shloka</h3>
+        <p id="aiSanskrit" class="sanskrit"></p>
+        <button class="audio-btn" title="Play Sanskrit" data-target="aiSanskrit">🔊</button>
+        <p id="aiTranslation"></p>
+        <div id="aiGuidance"></div>
+      </div>
+    </section>
+
+    <!-- TAB 3 – REMINDERS -->
+    <section id="remindTab" class="tab hidden">
+      <div class="glass card">
+        <h2>Daily Verse Reminder</h2>
+        <label>
+          <input type="checkbox" id="enableReminders"/>
+          Enable notifications
+        </label>
+        <label>
+          Time:
+          <input type="time" id="reminderTime"/>
+        </label>
+        <button id="saveReminder">Save</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ONBOARDING MODAL -->
+  <div id="guideModal" class="modal hidden">
+    <div class="glass card">
+      <div id="guideStep">Welcome to Gita Wisdom!</div>
+      <button id="guideNext">Next</button>
+    </div>
+  </div>
+
+  <!-- UPGRADE MODAL -->
+  <div id="upgradeModal" class="modal hidden">
+    <div class="glass card">
+      <h2>Upgrade Plan</h2>
+      <label><input type="radio" name="plan" value="free" checked/> Seeker (Free)</label><br/>
+      <label><input type="radio" name="plan" value="monthly"/> Devotee (₹99/mo)</label><br/>
+      <label><input type="radio" name="plan" value="annual"/> Sage (₹999/yr)</label><br/>
+      <button id="confirmUpgrade">Upgrade</button>
+      <button id="closeUpgrade">Later</button>
+    </div>
+  </div>
+
+  <!-- LOADER -->
+  <div id="loader" class="hidden">
+    <div class="om-spinner">ॐ</div>
+  </div>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
