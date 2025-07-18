@@ -16,6 +16,7 @@
   <header class="glass">
     <h1>Gita <span class="accent">Wisdom</span></h1>
     <nav>
+      <button id="tab-upgrade" class="tab-btn">Upgrade</button>
       <button id="tab-explore" class="tab-btn active">Explore Gita Shloka</button>
       <button id="tab-speak"   class="tab-btn">Speak Your Mind</button>
       <button id="tab-remind"  class="tab-btn">Daily Reminders</button>
@@ -108,6 +109,18 @@
       </div>
     </section>
   </main>
+
+  <section id="upgradeTab" class="tab hidden">
+    <div class="glass card">
+        <h2>Upgrade Plan</h2>
+        <div>
+            <input type="radio" name="plan" value="seeker" checked> Seeker (Free)<br>
+            <input type="radio" name="plan" value="devotee"> Devotee (₹99/mo)<br>
+            <input type="radio" name="plan" value="sage"> Sage (₹999/yr)<br>
+        </div>
+        <button id="confirmUpgrade">Upgrade</button>
+    </div>
+</section>
 
   <!-- ONBOARDING MODAL -->
   <div id="guideModal" class="modal hidden">
