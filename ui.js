@@ -31,3 +31,11 @@ document.addEventListener('click',e=>{
     playShloka(target.textContent);
   }
 });
+document.getElementById('confirmUpgrade').onclick = () => {
+  const plan = [...document.querySelectorAll('input[name="plan"]')].find(r => r.checked).value;
+  const user = currentUser();
+  user.plan = plan;
+  user.questionsLeft = plan === 'free' ? 3 : 90;
+  localStorage.setItem('gitaUser_' + user.email, JSON.stringify(user));
+  location.reload();
+};
