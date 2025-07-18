@@ -31,6 +31,7 @@ document.addEventListener('click',e=>{
     playShloka(target.textContent);
   }
 });
+//upgrade button magic
 document.getElementById('confirmUpgrade').onclick = () => {
   const plan = [...document.querySelectorAll('input[name="plan"]')].find(r => r.checked).value;
   const user = currentUser();
