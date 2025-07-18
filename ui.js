@@ -8,7 +8,7 @@ export { currentUser };
 
 export function showLoader(){document.getElementById('loader').classList.remove('hidden');}
 export function hideLoader(){document.getElementById('loader').classList.add('hidden');}
-export function openModal(el){el.classList.remove('hidden');}
+//export function openModal(el){el.classList.remove('hidden');}
 export function closeModal(el){el.classList.add('hidden');}
 
 // UPGRADE
