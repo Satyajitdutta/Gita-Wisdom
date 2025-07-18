@@ -2,7 +2,7 @@ import {initAuth, logout, currentUser} from './auth.js';
 import {loadVerse, randomVerse, initExplore} from './gita.js';
 import {initSpeak} from './gita.js';
 import {initReminders} from './gita.js';
-import {showLoader, hideLoader, openModal, closeModal} from './ui.js';
+//import {showLoader, hideLoader, openModal, closeModal} from './ui.js';
 
 const tabs = ['explore','speak','remind'];
 
@@ -49,7 +49,7 @@ function startGuide(){
   function render(){
     step.textContent=guideSteps[guideIdx];
     nextBtn.textContent = guideIdx===guideSteps.length-1 ? 'Finish' : 'Next';
-    openModal(modal);
+    //openModal(modal);
   }
   nextBtn.onclick=()=>{
     guideIdx++;
